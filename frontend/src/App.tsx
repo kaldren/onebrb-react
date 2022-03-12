@@ -1,11 +1,34 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import Sidebar from "./components/Sidebar";
+
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+import Dashboard from "./screens/Dashboard";
+import Home from "./screens/Home";
 
 function App() {
   return (
     <Container fluid className="App">
-      <Sidebar />
+      <Router>
+        <Row>
+
+          <Col xs lg="2">
+            <Sidebar />
+          </Col>
+
+          <Col xs lg="10">
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="dashboard" element={<Dashboard />} />
+            </Routes>
+          </Col>
+
+        </Row>
+      </Router>
     </Container>
   );
 }

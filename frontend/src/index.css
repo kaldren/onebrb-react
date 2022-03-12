@@ -16,8 +16,12 @@ code {
 
 .App {
   padding: 0 !important;
+  overflow: hidden;
 }
 
 .pro-sidebar {
   height: 100vh !important;
+  width: auto !important;
 }
+
+.pro-sidebar .pro-menu a:before {position: relative !important;}
