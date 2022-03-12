@@ -1,10 +1,10 @@
 import React from "react";
-import Button from "react-bootstrap/Button";
+import Header from "./components/Header";
 
 function App() {
   return (
     <div className="App">
-      <Button variant="primary">Primary</Button>{" "}
+      <Header />
     </div>
   );
 }
