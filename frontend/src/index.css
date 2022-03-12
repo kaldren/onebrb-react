@@ -12,6 +12,12 @@ code {
     monospace;
 }
 
+/* Custom */
+
+.App {
+  padding: 0 !important;
+}
+
 .pro-sidebar {
   height: 100vh !important;
 }

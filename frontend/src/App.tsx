@@ -1,11 +1,12 @@
 import React from "react";
+import { Container } from "react-bootstrap";
 import Sidebar from "./components/Sidebar";
 
 function App() {
   return (
-    <div className="App">
+    <Container fluid className="App">
       <Sidebar />
-    </div>
+    </Container>
   );
 }
 
