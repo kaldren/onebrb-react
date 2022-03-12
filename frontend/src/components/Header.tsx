@@ -4,12 +4,14 @@ import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
 
 type Props = {};
 
+const APP_NAME = process.env.REACT_APP_NAME;
+
 const Header = (props: Props) => {
   return (
     <header>
       <Navbar bg="light" expand="lg">
         <Container fluid>
-          <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+          <Navbar.Brand href="#">{APP_NAME}</Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
