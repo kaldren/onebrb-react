@@ -1,0 +1,14 @@
+{
+  "name": "onebrb",
+  "version": "1.0.0",
+  "description": "Onebrb app.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server"
+  },
+  "author": "Kaloyan Drenski",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
