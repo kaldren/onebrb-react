@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import Dashboard from "./screens/Dashboard";
 import Home from "./screens/Home";
+import ProfileCard from "./components/ProfileCard";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="dashboard" element={<Dashboard />} />
+                <Route path="profiles/:profileId" element={<ProfileCard />} />
             </Routes>
           </Col>
 
