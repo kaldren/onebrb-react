@@ -7,9 +7,10 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import Dashboard from "./screens/Dashboard";
-import Home from "./screens/Home";
-import ProfileCard from "./components/ProfileCard";
+import DashboardScreen from "./screens/DashboardScreen";
+import HomeScreen from "./screens/HomeScreen";
+import ProfileCardScreen from "./components/ProfileCard";
+import ProfileScreen from "./screens/ProfileScreen";
 
 function App() {
   return (
@@ -23,8 +24,9 @@ function App() {
 
           <Col xs lg="10">
             <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="dashboard" element={<Dashboard />} />
+                <Route path="/" element={<HomeScreen />} />
+                <Route path="dashboard" element={<DashboardScreen />} />
+                <Route path="profiles/:profileId" element={<ProfileScreen />} />
             </Routes>
           </Col>
 

@@ -1,20 +1,23 @@
 import React from 'react'
 import ProfileCard from '../components/ProfileCard'
-import { Profile } from '../interfaces/Profile';
+import { IProfile } from '../interfaces/IProfile';
 
 import {profilesMock} from "../profiles";
 
 type Props = {}
 
-const Dashboard = (props: Props) => {
+const DashboardScreen
+ = (props: Props) => {
   return (
     <>
-      <h2>Dashboard</h2>
+      <h2>DashboardScreen
+
+      </h2>
 
       {profilesMock.map(profile => {
 
         return <ProfileCard profile={
-          new class implements Profile 
+          new class implements IProfile 
           {
             id = profile.id;
             firstName = profile.firstName;
@@ -32,4 +35,4 @@ const Dashboard = (props: Props) => {
   )
 }
 
-export default Dashboard
+export default DashboardScreen

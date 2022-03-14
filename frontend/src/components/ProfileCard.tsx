@@ -1,10 +1,11 @@
 import React, {useState} from 'react'
 import { Button, Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom'
-import { Profile } from '../interfaces/Profile';
+import { IProfile } from '../interfaces/IProfile';
 
 type Props = {
-    profile: Profile,
+    profile: IProfile,
 }
 
 const ProfileCard = (props: Props) => {
@@ -18,7 +19,9 @@ const ProfileCard = (props: Props) => {
             <Card.Text>
             {props.profile.description}
             </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
+            <Link to={`/profiles/${props.profile.id}`}>
+              <Button variant="primary">Open profile</Button>
+            </Link>
         </Card.Body>
         </Card>
     </>
