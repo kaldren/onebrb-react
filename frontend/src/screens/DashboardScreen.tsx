@@ -10,14 +10,10 @@ const DashboardScreen
  = (props: Props) => {
   return (
     <>
-      <h2>DashboardScreen
-
-      </h2>
-
-      {profilesMock.map(profile => {
-
-        return <ProfileCard profile={
-          new class implements IProfile 
+      <h2>Dashboard</h2>
+      <ul>
+        {profilesMock.map(profile => {
+          let profileTemp = new class implements IProfile 
           {
             id = profile.id;
             firstName = profile.firstName;
@@ -28,9 +24,12 @@ const DashboardScreen
             phone = profile.phone;
             description = profile.description;
           }
-      } />
 
-      })}
+          return <li key={profileTemp.id}><ProfileCard profile={profileTemp} /></li>
+
+        })}
+
+      </ul>
     </>
   )
 }
