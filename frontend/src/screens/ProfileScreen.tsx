@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
-import GridBasic from '../components/GridBasic';
+import ProfileInfoGrid from '../components/ProfileInfoGrid';
 import { IProfile } from '../interfaces/IProfile';
 
 const ProfileScreen = () => {
@@ -67,7 +67,7 @@ const ProfileScreen = () => {
           </div>
           <div className="col-md-8">
             <div className="card mb-3">
-              <GridBasic />
+              <ProfileInfoGrid profile={profile}  />
             </div>
             <div className="row gutters-sm">
               <div className="col-sm-6 mb-3">
