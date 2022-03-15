@@ -1,18 +1,30 @@
-import React from 'react'
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
 import ProfileCard from '../components/ProfileCard'
 import { IProfile } from '../interfaces/IProfile';
 
-import {profilesMock} from "../profiles";
-
 type Props = {}
 
-const DashboardScreen
- = (props: Props) => {
+const DashboardScreen = (props: Props) => {
+
+  const [profiles, setProfiles] = useState<IProfile[] | undefined>(undefined);
+
+  useEffect(() => {
+    const fetchProfiles = async () => {
+      const {data} = await axios.get('/api/profiles');
+
+      setProfiles(data);
+    }
+
+    fetchProfiles();
+  }, [])
+
   return (
     <>
       <h2>Dashboard</h2>
       <ul>
-        {profilesMock.map(profile => {
+        {profiles?.map(profile => {
+          
           let profileTemp = new class implements IProfile 
           {
             id = profile.id;
@@ -23,6 +35,7 @@ const DashboardScreen
             email = profile.email;
             phone = profile.phone;
             description = profile.description;
+            social = profile.social;
           }
 
           return <li key={profileTemp.id}><ProfileCard profile={profileTemp} /></li>

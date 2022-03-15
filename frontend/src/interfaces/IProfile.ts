@@ -6,7 +6,8 @@ export interface IProfile {
     birthDate: Date,
     email: string,
     phone: string,
-    description: string
+    description: string,
+    social: any
 }
 
 // id: '1',

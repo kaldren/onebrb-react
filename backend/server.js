@@ -1,8 +1,11 @@
 import express from 'express';
-import profiles from './data/profiles.js';
 import dotenv from 'dotenv';
+import connectDb from './config/db.js';
+import profiles from './data/profiles.js';
 
 dotenv.config()
+
+connectDb();
 
 const app = express();
 
