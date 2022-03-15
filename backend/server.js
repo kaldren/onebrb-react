@@ -20,7 +20,7 @@ app.get('/api/profiles/:id', (req, res) => {
 })
 
 
-const PORT = process.env.PORT || 5000;
-const ENV = process.env.ENV || 'development';
+const PORT = process.env.PORT;
+const ENV = process.env.ENV;
 
 app.listen(PORT, console.log(`Server running in ${ENV} mode on ${PORT}`));
