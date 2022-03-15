@@ -1,5 +1,8 @@
-const express = require('express');
-const profiles = require('./data/profiles');
+import express from 'express';
+import profiles from './data/profiles.js';
+import dotenv from 'dotenv';
+
+dotenv.config()
 
 const app = express();
 
@@ -16,4 +19,8 @@ app.get('/api/profiles/:id', (req, res) => {
     res.json(profile);
 })
 
-app.listen(5000, console.log('working server'));
+
+const PORT = process.env.PORT || 5000;
+const ENV = process.env.ENV || 'development';
+
+app.listen(PORT, console.log(`Server running in ${ENV} mode on ${PORT}`));

@@ -1,4 +1,4 @@
-const profilesMock = [
+const profiles = [
     {
         id: '1',
         firstName: 'John',
@@ -31,4 +31,4 @@ const profilesMock = [
     },
 ]
 
-module.exports = profilesMock;
+export default profiles;

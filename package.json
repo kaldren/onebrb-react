@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Onebrb app.",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "start": "node backend/server",
     "server": "nodemon backend/server",
@@ -12,6 +13,7 @@
   "author": "Kaloyan Drenski",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^16.0.0",
     "express": "^4.17.3"
   },
   "devDependencies": {
