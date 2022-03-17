@@ -1,4 +1,4 @@
-const profiles = [
+const profiles:any = [
     {
         id: '1',
         firstName: 'John',
