@@ -1,7 +1,7 @@
 const profiles = [
     {
         id: '1',
-        firstName: 'John',
+        firstName: 'James',
         middleName: 'Johnson',
         familyName: "Doe",
         birthDate: new Date('05/05/1993'),

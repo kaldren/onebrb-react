@@ -2,13 +2,16 @@
   "name": "onebrb",
   "version": "1.0.0",
   "description": "Onebrb app.",
-  "main": "server.js",
+  "main": "backend/dist/server.js",
   "type": "module",
   "scripts": {
-    "start": "node backend/server",
-    "server": "nodemon backend/server",
+    "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
+    
+    "start:ts": "tsc -w",
+    "start:js": "nodemon backend/dist/server.js",
+
     "client": "npm start --prefix frontend",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm:start:*\" \"npm run client\""
   },
   "author": "Kaloyan Drenski",
   "license": "MIT",
@@ -18,7 +21,12 @@
     "mongoose": "^6.2.6"
   },
   "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^16.11.26",
     "concurrently": "^7.0.0",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.7.0",
+    "tslint": "^6.1.3",
+    "typescript": "^4.6.2"
   }
 }
