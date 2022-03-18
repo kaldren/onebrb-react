@@ -1,7 +1,8 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import connectDb from './config/db.js';
-import profiles from "./data/profiles.js";
+
+import profileRoutes from "./routes/profileRoutes.js";
 
 dotenv.config()
 
@@ -13,15 +14,7 @@ app.get('/', (req, res) => {
     res.send('Hi!')
 })
 
-app.get('/api/profiles', (req, res) => {
-    res.json(profiles);
-})
-
-// app.get('/api/profiles/:id', (req, res) => {
-//     const profile = profiles.find(p => p.id === req.params.id);
-//     res.json(profile);
-// })
-
+app.use('/api/profiles', profileRoutes);
 
 const PORT = process.env.PORT;
 const ENV = process.env.ENV;

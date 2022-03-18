@@ -15,7 +15,5 @@
             ]
         }
     },
-    "include": [
-        "./backend/**/*"
-    ]
+    "include": ["backend/*", "backend/**/*.ts"]
 }

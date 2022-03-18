@@ -16,7 +16,6 @@
     "data:d": "node backend/seeder.js -d",
     "data:insert": "concurrently \"npm run start:tsc\" \"npm run data:i\"",
     "data:destroy": "concurrently \"npm run start:tsc\" \"npm run data:d\""
-    
   },
   "author": "Kaloyan Drenski",
   "license": "MIT",

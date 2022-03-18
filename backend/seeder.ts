@@ -1,8 +1,8 @@
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import profiles from"./dist/data/profiles.js";
-import Profile from './dist/models/profileModel.js';
-import connectDb from './dist/config/db.js';
+import profiles from"./dist/data/profiles";
+import Profile from './dist/models/profileModel';
+import connectDb from './dist/config/db';
 import colors from "colors";
 
 dotenv.config();
