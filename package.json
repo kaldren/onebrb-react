@@ -6,15 +6,17 @@
   "type": "module",
   "scripts": {
     "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
-    "start:ts": "tsc -w",
+    "build": "npm build",
+    "start:tscw": "tsc -w",
+    "start:tsc": "tsc",
     "start:js": "nodemon backend/dist/server.js",
     "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm:start:*\" \"npm run client\"",
     "data:i": "node backend/seeder.js -i",
     "data:d": "node backend/seeder.js -d",
-    "dev": "concurrently \"npm:start:*\" \"npm run client\"",
-    "data:i2": "concurrently \"npm run start:ts\" \"npm run data:i\"",
-    "data:d2": "concurrently \"npm run start:ts\" \"npm run data:d\"",
-    "build": "npm build"
+    "data:insert": "concurrently \"npm run start:tsc\" \"npm run data:i\"",
+    "data:destroy": "concurrently \"npm run start:tsc\" \"npm run data:d\""
+    
   },
   "author": "Kaloyan Drenski",
   "license": "MIT",
