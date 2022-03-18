@@ -7,7 +7,7 @@
         "moduleResolution": "node",
         "sourceMap": true,
         "outDir": "backend/dist",
-        "rootDir": "./backend",
+        "rootDir": "backend",
         "baseUrl": ".",
         "paths": {
             "*": [

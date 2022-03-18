@@ -1,6 +1,5 @@
 const profiles = [
     {
-        id: '1',
         firstName: 'James',
         middleName: 'Johnson',
         familyName: "Doe",
@@ -9,16 +8,15 @@ const profiles = [
         phone: '+359888778877',
         description: '.NET Developer for the past 4 years.',
         social: [
-            // {"Website": "https://johndoe.com"},
-            // {"LinkedIn": "https://www.linkedin.com/in/johndoe/"},
-            // {"Github": "johndoe"},
-            // {"Twitter": "@JohnDoe"},
-            // {"Instagram": "JohnDoe"},
-            // {"Facebook": "JohnDoe"},
+            {name: "Website", url: "https://johndoe.com"},
+            {name: "LinkedIn", url: "https://www.linkedin.com/in/johndoe/"},
+            {name: "Github", url: "johndoe"},
+            {name: "Twitter", url: "@JohnDoe"},
+            {name: "Instagram", url: "JohnDoe"},
+            {name: "Facebook", url: "JohnDoe"},
         ]
     },
     {
-        id: '2',
         firstName: 'Bob',
         middleName: 'Johnson',
         familyName: "Harris",
@@ -27,16 +25,15 @@ const profiles = [
         phone: '+359888223344',
         description: 'Java Developer for the past 14 years.',
         social: [
-            // {"Website": "https://johndoe.com"},
-            // {"LinkedIn": "https://www.linkedin.com/in/johndoe/"},
-            // {"Github": "johndoe"},
-            // {"Twitter": "@JohnDoe"},
-            // {"Instagram": "JohnDoe"},
-            // {"Facebook": "JohnDoe"},
+            {name: "Website", url: "https://johndoe.com"},
+            {name: "LinkedIn", url: "https://www.linkedin.com/in/johndoe/"},
+            {name: "Github", url: "johndoe"},
+            {name: "Twitter", url: "@JohnDoe"},
+            {name: "Instagram", url: "JohnDoe"},
+            {name: "Facebook", url: "JohnDoe"},
         ]
     },
     {
-        id: '3',
         firstName: 'Steve',
         middleName: 'Dick',
         familyName: "Ballmer",
@@ -45,12 +42,12 @@ const profiles = [
         phone: '+359888111111',
         description: 'Boss.',
         social: [
-            // {"Website": "https://johndoe.com"},
-            // {"LinkedIn": "https://www.linkedin.com/in/johndoe/"},
-            // {"Github": "johndoe"},
-            // {"Twitter": "@JohnDoe"},
-            // {"Instagram": "JohnDoe"},
-            // {"Facebook": "JohnDoe"},
+            {name: "Website", url: "https://johndoe.com"},
+            {name: "LinkedIn", url: "https://www.linkedin.com/in/johndoe/"},
+            {name: "Github", url: "johndoe"},
+            {name: "Twitter", url: "@JohnDoe"},
+            {name: "Instagram", url: "JohnDoe"},
+            {name: "Facebook", url: "JohnDoe"},
         ]
     },
 ]
