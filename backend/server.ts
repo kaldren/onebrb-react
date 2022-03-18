@@ -1,6 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import connectDb from './config/db.js';
+import profiles from "./data/profiles.js";
 
 dotenv.config()
 
@@ -13,7 +14,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/api/profiles', (req, res) => {
-    res.json({});
+    res.json(profiles);
 })
 
 // app.get('/api/profiles/:id', (req, res) => {
