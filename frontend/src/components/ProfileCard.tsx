@@ -19,7 +19,7 @@ const ProfileCard = (props: Props) => {
             <Card.Text>
             {props.profile.description}
             </Card.Text>
-            <Link to={`/profiles/${props.profile.id}`}>
+            <Link to={`/profiles/${props.profile._id}`}>
               <Button variant="primary">Open profile</Button>
             </Link>
         </Card.Body>

@@ -7,9 +7,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import express from "express";
-import asyncHandler from "express-async-handler";
-import Profile from "../models/profileModel.js";
+import express from 'express';
+import asyncHandler from 'express-async-handler';
+import Profile from '../models/profileModel.js';
 const router = express.Router();
 // @desc Fetch all profiles
 // @route GET /api/profiles
@@ -26,7 +26,8 @@ router.get('/:id', asyncHandler((req, res) => __awaiter(void 0, void 0, void 0, 
     if (profile) {
         res.json(profile);
     }
-    res.status(404).json({ message: "Profile not found!" });
+    res.status(404);
+    throw new Error('Profile not found.');
 })));
 export default router;
 //# sourceMappingURL=profileRoutes.js.map
